@@ -12,7 +12,11 @@ _An Epicodus project focused on software design with the MVC pattern in C#. _
 ## Demo
 
 ## Specs
-
+ * user will input their music(name of cd/record)
+ * it can be CD, Vinyl, Cassette tape
+ * user will put in artist name
+ * list all artists
+ * when artist is clicked, wiill display all cds/vinyl/etc from that artist.
 
 ## Setup/Installation Requirements
 > This application requires the .NETCore SDK - [Find your version here](https://dotnet.microsoft.com/download/dotnet-core/2.2)
