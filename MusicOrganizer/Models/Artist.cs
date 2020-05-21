@@ -12,6 +12,8 @@ namespace MusicOrganizer.Models
     public Artist(string name)
     {
       Name = name;
+      _instances.Add(this);
+      Id = _instances.Count;
     }
 
     public static void ClearAll()

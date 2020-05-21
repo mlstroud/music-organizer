@@ -11,18 +11,10 @@ namespace MusicOrganizer.Models
 
     public MusicItem(string title, string format)
     {
-      if (_instances.Count == 0)
-      {
-        Id = 1;
-      }
-      else
-      {
-        Id++;
-      }
-
       Title = title;
       Format = format;
       _instances.Add(this);
+      Id = _instances.Count;
     }
 
     public static void ClearAll()
