@@ -11,7 +11,7 @@ namespace MusicOrganizer.Models
 
     public Artist(string name)
     {
-
+      Name = name;
     }
 
     public static void ClearAll()
