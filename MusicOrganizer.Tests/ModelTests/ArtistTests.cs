@@ -53,5 +53,17 @@ namespace MusicOrganizer.Tests
 
       CollectionAssert.AreEqual(newList, result);
     }
+
+    [TestMethod]
+    public void Find_ReturnsArtistById_Artist()
+    {
+      Artist newArtist = new Artist("test");
+      Artist newArtist2 = new Artist("test2");
+      int id = 2;
+
+      Artist result = Artist.Find(id);
+
+      Assert.AreEqual(newArtist2, result);
+    }
   }
 }
