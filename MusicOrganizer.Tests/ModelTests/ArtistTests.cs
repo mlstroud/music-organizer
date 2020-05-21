@@ -65,5 +65,17 @@ namespace MusicOrganizer.Tests
 
       Assert.AreEqual(newArtist2, result);
     }
+
+    [TestMethod]
+    public void Find_ReturnsArtistByName_Artist()
+    {
+      Artist newArtist = new Artist("Dream Theater");
+      Artist newArtist2 = new Artist("Tool");
+      string name = "Dream Theater";
+
+      Artist result = Artist.Find(name);
+
+      Assert.AreEqual(newArtist, result);
+    }
   }
 }
