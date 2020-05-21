@@ -43,6 +43,17 @@ namespace MusicOrganizer.Tests
     }
 
     [TestMethod]
+    public void GetId_ReturnsMusicItemId_Int()
+    {
+      MusicItem newMusicItem = new MusicItem("test", "test");
+      int id = 1;
+
+      int result = newMusicItem.Id;
+
+      Assert.AreEqual(id, result);
+    }
+
+    [TestMethod]
     public void GetAllItems_ReturnsAllMusicItems_ListMusicItem()
     {
       MusicItem newMusicItem = new MusicItem("test", "test");
