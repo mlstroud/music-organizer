@@ -20,5 +20,10 @@ namespace MusicOrganizer.Models
     {
       _instances.Clear();
     }
+
+    public static List<Artist> GetAllArtists()
+    {
+      return _instances;
+    }
   }
 }
