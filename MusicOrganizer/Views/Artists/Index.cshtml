@@ -1,0 +1,16 @@
+@using MusicOrganizer.Models;
+@{
+  Layout = "_Layout";
+}
+
+<div class="container">
+  <div class="jumbotron">
+    <h1>Artists</h1>
+  </div>
+  <ul>
+    @foreach(Artist artist in Model)
+    {
+      <li><a href='/artists/@artist.Id'>@artist.Name</a></li>
+    }
+  </ul>
+</div>

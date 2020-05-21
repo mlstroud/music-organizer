@@ -1,0 +1,9 @@
+@{
+  Layout = "_Layout";
+}
+
+<form action="/artists/@Model.Id/albums" method="post">
+<label for="title">Album Title</label>
+<input id="title" name="title" type="text" class="form-control">
+<button type="submit" class="btn btn-info">Add Album</button>
+</form>

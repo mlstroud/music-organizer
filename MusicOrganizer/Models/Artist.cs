@@ -11,6 +11,7 @@ namespace MusicOrganizer.Models
 
     public Artist(string name)
     {
+      MusicItems = new List<MusicItem>();
       Name = name;
       _instances.Add(this);
       Id = _instances.Count;
@@ -42,6 +43,11 @@ namespace MusicOrganizer.Models
       }
 
       return null;
+    }
+
+    public void AddAlbum(MusicItem album)
+    {
+      MusicItems.Add(album);
     }
   }
 }

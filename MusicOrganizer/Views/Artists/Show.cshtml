@@ -1,0 +1,28 @@
+@using MusicOrganizer.Models;
+@{
+  Layout = "_Layout";
+}
+
+<div class="container">
+  <div class="jumbotron">
+    <h1>Albums by @Model["artist"].Name</h1>
+  </div>
+
+  <ul>
+    @if(Model["albums"] != null)
+    {
+      @foreach(var item in Model["albums"])
+      {
+        <li>@item.Title</li>
+      }
+    }
+    else
+    {
+      <h2>There are no albums added yet.</h2>
+    }
+  </ul>
+
+  <a href='/artists/@Model["artist"].Id/albums/new'>Add an Album</a>
+  <br>
+  <a href='/artists'>View all Artists</a>
+</div>
