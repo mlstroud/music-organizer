@@ -33,6 +33,14 @@ namespace MusicOrganizer.Models
 
     public static Artist Find(string name)
     {
+      foreach (Artist artist in _instances)
+      {
+        if (artist.Name == name)
+        {
+          return artist;
+        }
+      }
+
       return null;
     }
   }
