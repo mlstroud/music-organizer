@@ -30,5 +30,16 @@ namespace MusicOrganizer.Tests
 
       Assert.AreEqual(name, result);
     }
+
+    [TestMethod]
+    public void GetId_ReturnsArtistId_Int()
+    {
+      Artist newArtist = new Artist("test");
+      int id = 1;
+
+      int result = newArtist.Id;
+
+      Assert.AreEqual(id, result);
+    }
   }
 }
