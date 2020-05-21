@@ -1,11 +1,18 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MusicOrganizer.Models;
+using System;
+using System.Collections.Generic;
 
 namespace MusicOrganizer.Tests
 {
   [TestClass]
-  public class MusicItemTests
+  public class MusicItemTests : IDisposable
   {
+    public void Dispose()
+    {
+      MusicItem.ClearAll();
+    }
+
     [TestMethod]
     public void MusicItemConstructor_CreatesInstanceofMusicItem_MusicItem()
     {
@@ -33,6 +40,18 @@ namespace MusicOrganizer.Tests
       string result = newMusicItem.Format;
 
       Assert.AreEqual(format, result);
+    }
+
+    [TestMethod]
+    public void GetAllItems_ReturnsAllMusicItems_ListMusicItem()
+    {
+      MusicItem newMusicItem = new MusicItem("test", "test");
+      MusicItem newMusicItem2 = new MusicItem("test2", "test2");
+      List<MusicItem> newMusicList = new List<MusicItem> { newMusicItem, newMusicItem2 };
+
+      List<MusicItem> result = MusicItem.GetAllItems();
+
+      CollectionAssert.AreEqual(newMusicList, result);
     }
   }
 }
